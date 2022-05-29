@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--hoja de estilos-->
+    <link rel="stylesheet" href="estilos.css">
+    <!--libreria animacion css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+       .banner-area h1{
+          animation:swing;
+          animation-duration: 3s; 
+        }
+    </style>
+    <!--libreria font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Inicio | Miaw Refugio</title>
+    <link rel="icon" href="./img/logo1.ico">
+</head>
+<body>
+    <header>
+        <h2><a href="#"></a>Miaw Refugio</h2>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contacto</a>
+            <a href="#ubicacion">Ubicación</a>
+        </nav>
+    </header>
+
+    <section class="banner-area">
+        <div class="banner-img"></div>
+        <h1>¡Bienvenidos!</h1>
+        <h3>Conoce a tu nuevo mejor amigo</h3>
+        <a href="#contact" class="banner-btn">Contacto</a>
+    </section>
+
+    <section class="about-area" id="about">
+        <h3 class="section-title">Nosotros</h3>
+        <ul class="about-content">
+            <li class="about-left"></li>
+            <li class="about-right">
+                <h2>¿Quiénes somos?</h2>
+                <p>Miaw Refugio es una asociación sin fines de lucro, cuyo objetivo principal consiste en la protección 
+                y defensa de los derechos de todos esos felinos que nacen y sobreviven en las calles o los que,
+                no siendo así, acaban en ellas.</p>    
+            </li>     
+        </ul>
+        <ul class="about-content">
+            <li class="about-left2"></li>
+            <li class="about-right">
+                <h2>¡También podés ser parte!</h2>
+                <p>Cada día rescatamos, cuidamos, sanamos y  buscamos buenos hogares  donde nuestros felinos sean respetados,
+                 cuidados y queridos como ellos se merecen.<br> Tú también puedes formar parte de nuestra asociación y colaborar
+                 con nuestra causa.<br> Hazte socio, voluntario o padrino. Elige cómo y ayúdanos a seguir ayudándolos a ellos.</p>
+            </li>
+        </ul>
+    </section>
+   
+    <section id="blog">
+        <h3 class="section-title">¿Por qué adoptar?</h3>
+        <div class="contenedor">
+           <article>
+                <img src="../img/blog1.jpg" alt="">
+                <h4>¡Salvarás su vida!</h4>
+            </article>
+            <article>
+                <img src="../img/blog2.jpg" alt="">
+                <h4>¡Tendrás un compañero único!</h4>
+            </article>
+            <article>
+                <img src="../img/blog3.jpg" alt="">
+                <h4>¡Son divertidos y tiernos!</h4>
+            </article>
+        </div>
+    </section>
+    
+    <div class="box-area" id="blog">
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Seguínos en redes</strong></span>
+                <p>Entérate de las últimas novedades y compartí nuestras historias.</p>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Doná</strong></span>
+                <p>Necesitamos de tu ayuda.¡Toda colaboración es bienvenida!</p>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Apadriná</strong></span>
+                <p>Podés apadrinar un gatito y ser parte de su recuperación.</p>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <section class="contacto" id="contact">
+        <h3 class="section-title">Contacto</h3>
+        <div class="contenedor" >
+            
+            <form action="" class="formulario" id="formulario">
+                <input type="text"  class="nombre" placeholder="Nombre: " id="nombre" onkeyup="validarNombre()" >
+                <span id="nombre-error"></span>
+
+                <input type="email" class="email" placeholder="Correo Electronico:" id="email" onkeyup="validarEmail()">
+                <span id="email-error"></span>
+
+                <input type="text" class="tel" placeholder="Número de teléfono:" id="tel" onkeyup="validarTel()">
+                <span id="tel-error"></span>
+
+                <select name="" class="asunto" id="asunto" onkeypress="validarAsunto()">
+                    <option value="" selected disabled>Elige una opción</option>
+                    <option value="donar">Donación</option>
+                    <option value="adop">Adopción</option>
+                    <option value="cons">Consulta</option>  
+                </select>
+                <span id="asunto-error"></span>
+
+                <textarea name="" class="mensaje" placeholder="Deja tu mensaje:" id="mensaje" onkeyup="validarMensaje()" ></textarea>
+                <span id="mensaje-error"></span>
+
+                <input type="submit" value="enviar" class="btn" onclick="return validarForm()">
+                <span id="submit-error"></span>
+            </form>
+        </div >
+
+    </section>
+
+
+    <section class="contact-area" id="ubicacion">
+        <h3 class="section-title">Ubicación</h3>
+        <ul class="contact-content">
+            <li>
+                <i class="fa fa-map-marker"></i>
+                <p>427 Nicolás Avellaneda <br>Santa Fe,Arg</p>
+            </li>
+            <li>
+                <i class="fa fa-phone"></i>
+                <p>+123 456 789 <br>+789 456 123</p>
+            </li>
+            <li>
+                <i class="fa fa-envelope"></i>
+                <p>info@miawrefugio.com <br>adopciones@miawrefugio.com</p>
+            </li>
+        </ul>
+       
+    </section>
+
+    <div >
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.3316191597223!2d-60.73259816736164!3d-32.783465272055665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b650779331f281%3A0xfe5655ccaf6f4348!2sAvellaneda%20470%2C%20Fray%20Luis%20Beltr%C3%A1n%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1653776151609!5m2!1ses-419!2sar" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="index.html">
+                        <img src="../img/logo.png" alt="logo Miaw Refugio">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una asociación cuyo objetivo es rescatar y buscar hogares a michis abandonados. </p>
+                <p>Podés ser socio, padrino o voluntario.¡Ayúdanos a seguir ayudándolos!</p>
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS</h2>
+                <div class="red-social">
+                    <a class="fa-brands fa-facebook"  href="#"></a>
+                    <a class="fa-brands fa-instagram" href="#"></a>
+                    <a class="fa-brands fa-tiktok" href="#"></a>
+                    <a class="fa-brands fa-youtube" href="#"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>Miaw Refugio</b> - Todos los derechos Reservados.</small>
+        </div>
+                
+    </footer>
+
+    
+    <script src="validacion.js"></script>
+</body>
+</html>
